@@ -1,9 +1,10 @@
 import React,{ useState } from 'react';
-import { UserType } from '../types/User';
+import { UserType } from '../types/user';
 import Search from '../components/Search';
 import { MenuMobile } from '../components/MenuMobile';
 import Footer from '../components/Footer';
 import axios from 'axios'; 
+import User from '../components/User';
 
 export default function Home() {
   const [user, setUser] = useState<UserType | null>(null);
@@ -12,12 +13,12 @@ export default function Home() {
     try {
       const response = await axios.get(`https://api.github.com/users/${userName}`);
       const data = response.data;
-
-      const { avatar_url, id, nome, login, location, followers, following } = data;
+      console.log(data)
+      const { avatar_url, id, name, login, location, followers, following } = data;
       const userData: UserType = {
         avatar_url,
         id,
-        nome,
+        name,
         login,
         location,
         followers,
@@ -34,7 +35,8 @@ export default function Home() {
       <MenuMobile />
       <h1>HUBusca - Site de busca de usuários e repositórios</h1>
       <Search loadUser={loadUser} />
-      {user && <p>{user.login}</p>}
+      {user && <User {...user}/>}
+      
       <Footer />
     </>
   );

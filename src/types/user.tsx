@@ -1,6 +1,6 @@
 export type UserType = {
     id: number;
-    nome: string;
+    name: string;
     avatar_url: string;
     login: string;
     location: string;
