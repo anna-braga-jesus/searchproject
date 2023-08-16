@@ -1,11 +1,20 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./routes/Home";
+import Search from "./components/Search";
+import Historic from "./routes/Historic";
 
-function App() {
+export default function App() {
 
   return (
-    <>
-    <h1>Hubbusca</h1>
-    </>
-  )
+    <div className="App">
+      <BrowserRouter>
+        <Home />
+        <Routes>
+          {/* <Route path="/search" element={<Search />} /> */}
+          {/* <Route path="/historic" element={<Historic />} /> */}
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
 
-export default App
