@@ -35,8 +35,18 @@ export const Css = {
     Paragraph : styled.p`
         color: lightblue;
     `,
-    Container : styled.div`
-        display: flex;
-        gap: 0.5rem;
-    `
-};
+  Container : styled.div`
+    display: flex;
+    gap: 0.5rem;
+  `,
+
+Footer : styled.footer`
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+`
+  };

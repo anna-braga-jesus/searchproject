@@ -8,6 +8,7 @@ import User from '../components/User';
 
 export default function Home() {
   const [user, setUser] = useState<UserType | null>(null);
+  const [error, setError] = useState(false);
 
   const loadUser = async (userName: string) => {
     try {
@@ -26,7 +27,7 @@ export default function Home() {
       };
       setUser(userData);
     } catch (error) {
-      console.error('Error loading user:', error);
+      console.error('Erro: ', error);
     }
   };
 
@@ -35,8 +36,7 @@ export default function Home() {
       <MenuMobile />
       <h1>HUBusca - Site de busca de usuários e repositórios</h1>
       <Search loadUser={loadUser} />
-      {user && <User {...user}/>}
-      
+      {user && <User {...user}/>}      
       <Footer />
     </>
   );

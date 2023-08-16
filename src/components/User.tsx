@@ -8,7 +8,8 @@ const User = ({ id, name, avatar_url, login, location, followers, following }: U
              <Link to={`/repos/${login}`}>
             <img src={avatar_url} alt={login} />
              </Link>
-           {name && <h2>{name}</h2>}
+           {name &&  
+           <h2>{name}</h2>}
             <h2>{login}</h2>
             {location &&   
                 <p>
