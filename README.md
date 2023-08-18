@@ -18,6 +18,8 @@ An online platform that leverages the public GitHub API to streamline the search
 - React-router-dom
 - React-Icons
 - Jest
+- IndexedDB
+- UseContext
 
 ## How to start:
 Clone this repository: 

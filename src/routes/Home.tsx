@@ -5,22 +5,12 @@ import { MenuMobile } from '../components/MenuMobile';
 import Footer from '../components/Footer';
 import axios from 'axios'; 
 import User from '../components/User';
-import { RepoType } from '../types/repo';
 import { GlobalContext } from '../App';
 import indexedDBCrud, { SearchType } from '../utils/indexeddb';
 
 export default function Home() {
   const [user, setUser] = useState<UserType | null>(null);
-  const [isLoading, setIsLoading] = useState(true);
   const global = useContext(GlobalContext);
-  
-
-  // useEffect(()=>{
-  //   axios.get(`https://api.github.com/orgs/google/repos`).then(res => res.data())
-  //   .then((data)=> {
-  //     setRepos(data);
-  //   })
-  // },[])
 
   const loadUser = async (userName: string) => {
     try {
@@ -55,10 +45,8 @@ export default function Home() {
   return (
     <>
       <MenuMobile />
-      <h1>HUBusca - Site de busca de usuários e repositórios</h1>
       <Search loadUser={loadUser} />
       {user && <User {...user}/>}  
-      
       <Footer />
     </>
   );

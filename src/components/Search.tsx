@@ -1,12 +1,8 @@
 import React, {useState, KeyboardEvent} from 'react';
-import{BsSearch} from 'react-icons/bs';
 import { Css } from './styles'; 
-import indexedDBCrud from '../utils/indexeddb';
-
 type SearchType = {
     loadUser: (userName: string) => Promise<void>
 }
-
 
 export default function Search({loadUser}: SearchType) {
     const [ userName, setUserName] = useState("");
@@ -25,9 +21,7 @@ export default function Search({loadUser}: SearchType) {
     onChange={(e)=> setUserName(e.target.value)} 
     onKeyDown={handleKeyDown}
     />
-        <Css.Button onClick={() => loadUser(userName)}>
-            <BsSearch />
-        </Css.Button> 
+        <Css.Button onClick={() => loadUser(userName)}>Pesquisar! </Css.Button>
     </Css.Container>
     </Css.SearchContent>
     )

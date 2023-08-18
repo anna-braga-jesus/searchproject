@@ -12,21 +12,21 @@ import { Css } from './styles';
     }
      return (
          <>
-            <header className="header">
-        <button className='btn_icon_header' onClick={toggleMenu}>
-          {showMenu ? <BsX /> : <BsList />}
-        </button>
-        <div className="logo_header">
-          <img src={logo} className="img_logo_header" alt="LOGO" />
-        </div>
-        <div
-          className={`navigation_header ${showMenu ? 'show' : ''}`}
-          id='navigation_header'
-        >
-          <Css.LinkStyle to="/">Home</Css.LinkStyle>
-          <Css.LinkStyle to="/historic">Historic</Css.LinkStyle>
-        </div>
-      </header>
+            <Css.Header className="header">
+            <Css.ListMenu className='btn_icon_header' onClick={toggleMenu}>
+              {showMenu ? <BsX /> : <BsList />}
+            </Css.ListMenu>
+            <Css.LogoHeader>
+              <img src={logo} className="img_logo_header" alt="LOGO" />
+            </Css.LogoHeader>
+            <Css.Nav
+              className={`navigation_header ${showMenu ? 'show' : ''}`}
+              id='navigation_header'
+            >
+            <Css.LinkStyle to="/">Home</Css.LinkStyle>
+            <Css.LinkStyle to="/historic">Historic</Css.LinkStyle>
+            </Css.Nav>
+            </Css.Header>
       
          </>
      )

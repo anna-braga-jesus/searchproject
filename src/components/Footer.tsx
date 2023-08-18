@@ -4,7 +4,7 @@ import { Css } from './styles';
 const Footer: React.FC = () => {
   return (
     <Css.Footer>
-      <p>&copy; {new Date().getFullYear()} Seu Nome. Todos os direitos reservados.</p>
+      <p>&copy; {new Date().getFullYear()} Anna Carolina Braga. Todos os direitos reservados.</p>
     </Css.Footer>
   );
 };

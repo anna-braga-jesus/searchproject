@@ -18,7 +18,7 @@ export default function RepositoryList({ list, refreshList}: RepoTypeList){
     const formatDate = (isoDate: any) => {
         const date = new Date(isoDate);
         const day = date.getDate();
-        const month = date.getMonth() + 1; // Lembrando que os meses em JavaScript são baseados em zero, então adicionamos 1
+        const month = date.getMonth() + 1; 
         const year = date.getFullYear();
         return `${month.toString().padStart(2, '0')}/${day.toString().padStart(2, '0')}/${year}`;
     };

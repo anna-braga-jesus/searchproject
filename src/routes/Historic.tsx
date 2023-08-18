@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import { MenuMobile } from '../components/MenuMobile';
 import Footer from '../components/Footer';
 import indexedDBCrud, { SearchType } from '../utils/indexeddb';
@@ -16,38 +15,23 @@ export default function Historic() {
     return (
     <>
         <MenuMobile />
-        <div>Histórico dos amiguinhos</div>
-        <h3>{historic?.map((hist: any, index: number)=>{ return (
-            <li key={index}>
-                <Css.LinkStyle to={`/repos/${hist.search}`}>{hist.search}</Css.LinkStyle>
-            </li>
-        )})}</h3>
-
-
-        {/* {list?.map((repo: any)=>{
+        <Css.HistoricStyle>
+            <Css.StyledBox >
+            <Css.Paragraph>Últimos pesquisados: </Css.Paragraph>
+        <h3>{historic?.map((hist: any, index: number)=>{ 
             return (
-            <li key={repo.id}>
-                <a href={repo.html_url}>
-                    <TopBody>
-                        <h2>{repo.full_name}</h2>
-                    </TopBody>
-                    <MidBody>
-                        <h3>{repo.description}</h3>
-                    </MidBody>
-                    <BottomBody>
-                        {repo.language && <h3>{repo.language}</h3>}
-                        <h3>Updated on {formatDate(repo.pushed_at)}</h3>
-                        <h3>Created at {formatDate(repo.created_at)}</h3>
-                    </BottomBody>
-                </a>
-            </li>) 
-            })} */}
-
-
-
-
-
-        <Link to={"/"}>Vai pra algum lugar amigo ?</Link>
+                <>
+                <Css.StyledList>        
+                <Css.StyledListItem key={index}>
+                <Css.LinkStyle to={`/repos/${hist.search}`}>{hist.search}</Css.LinkStyle>
+                </Css.StyledListItem>
+                </Css.StyledList>
+                </>
+                )
+                })}
+        </h3>
+            </Css.StyledBox>
+        </Css.HistoricStyle>
         <Footer />
     </>
     )

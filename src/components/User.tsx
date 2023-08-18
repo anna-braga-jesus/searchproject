@@ -6,31 +6,30 @@ import { Css } from './styles';
 const   User = ({ id, name, avatar_url, login, location, followers, following }: UserType) => {
 
     return (
-        <div>
+        <Css.SearchResult>
+        <Css.SearchResultLeft>
              <Link to={`/repos/${login}`}>
             <Css.UserImage src={avatar_url} alt={login} />
              </Link>
-           {name &&  
-           <h2>{name}</h2>}
-            <h2>{login}</h2>
+             </Css.SearchResultLeft>
+
+             <Css.SearchResultRight>
+            {name &&  
+           <Css.Paragraph> {name}</Css.Paragraph>} 
+            <Css.Paragraph>Login: {login}</Css.Paragraph>
             {location &&   
                 <p>
                     <MdLocationPin />
-                    <span>{location}</span>
+                    <Css.Paragraph>{location}</Css.Paragraph>
                 </p>
             }
             <div>
-                <p>Seguidores: </p>
-                <p>{followers}</p>
+                <Css.Paragraph>Seguidores: </Css.Paragraph>
+                <Css.Paragraph>{followers}</Css.Paragraph>
             </div>
-            <div>
-                <p>Seguindo: </p>
-                <p>{following}</p>
-            </div>
-            <Link to="/historic">
-           <button>TESTE BONITO</button>
-            </Link>
-        </div>
+             </Css.SearchResultRight>
+        </Css.SearchResult>
+       
     );
 }
 
