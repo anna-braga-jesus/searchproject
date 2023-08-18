@@ -1,6 +1,7 @@
 import React, {useState, KeyboardEvent} from 'react';
 import{BsSearch} from 'react-icons/bs';
 import { Css } from './styles'; 
+import indexedDBCrud from '../utils/indexeddb';
 
 type SearchType = {
     loadUser: (userName: string) => Promise<void>

@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { BsList, BsX } from "react-icons/bs";
 import logo from '../components/logo.png';
+import { Link } from 'react-router-dom';
+import { Css } from './styles';
 
  export function MenuMobile(){
     const [showMenu, setShowMenu] = useState(false);
@@ -21,8 +23,8 @@ import logo from '../components/logo.png';
           className={`navigation_header ${showMenu ? 'show' : ''}`}
           id='navigation_header'
         >
-          <a href="#">About</a>
-          <a href="#">Historic</a>
+          <Css.LinkStyle to="/">Home</Css.LinkStyle>
+          <Css.LinkStyle to="/historic">Historic</Css.LinkStyle>
         </div>
       </header>
       
