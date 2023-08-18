@@ -19,7 +19,6 @@
 body{
   /* background-color:var(--color-purple) ; */
   background-color:lightgray;
-  padding: 2rem;
 }
 p{
   text-align: center;
@@ -78,7 +77,6 @@ a{
     background-color: var(--color-dark5);
     height: 100%;
     width: 35vw;
-    padding: 16px;
     animation-duration: 2s;
     margin-left: -100vw;
   }

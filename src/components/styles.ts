@@ -1,6 +1,11 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 export const Css = {
+  UserImage: styled.img`
+  border-radius: 50%;
+  
+  `,
   Input: styled.input<{ $inputColor?: string }>`
     padding: 0.5em;
     margin: 0.5em;
@@ -39,14 +44,19 @@ export const Css = {
     display: flex;
     gap: 0.5rem;
   `,
-
-Footer : styled.footer`
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-`
+  Footer : styled.footer`
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  `,
+  LinkStyle: styled(Link)`
+    color: #eee;
+    &:focus{
+      color: red;
+    };
+  `,
   };
