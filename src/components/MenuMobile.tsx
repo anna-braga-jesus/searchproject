@@ -1,7 +1,6 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { BsList, BsX } from "react-icons/bs";
 import logo from '../components/logo.png';
-import { Link } from 'react-router-dom';
 import { Css } from './styles';
 
  export function MenuMobile(){

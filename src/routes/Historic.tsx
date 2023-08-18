@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import { MenuMobile } from '../components/MenuMobile';
 import Footer from '../components/Footer';
 import indexedDBCrud, { SearchType } from '../utils/indexeddb';

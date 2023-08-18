@@ -1,4 +1,4 @@
-import React, {useState, KeyboardEvent} from 'react';
+import {useState, KeyboardEvent} from 'react';
 import { Css } from './styles'; 
 type SearchType = {
     loadUser: (userName: string) => Promise<void>

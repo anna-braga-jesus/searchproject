@@ -1,9 +1,8 @@
-import React from 'react';
 import { UserType } from "../types/user"
 import {MdLocationPin} from 'react-icons/md';
 import { Link } from 'react-router-dom';
 import { Css } from './styles';
-const   User = ({ id, name, avatar_url, login, location, followers, following }: UserType) => {
+const   User = ({  name, avatar_url, login, location, followers}: UserType) => {
 
     return (
         <Css.SearchResult>

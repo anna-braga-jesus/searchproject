@@ -1,4 +1,4 @@
-import React,{ useContext, useState } from 'react';
+import { useContext, useState } from 'react';
 import { UserType } from '../types/user';
 import Search from '../components/Search';
 import { MenuMobile } from '../components/MenuMobile';

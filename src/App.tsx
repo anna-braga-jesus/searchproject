@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Home from "./routes/Home";
 import Historic from "./routes/Historic";
 import { createContext, useState } from "react";
-import { UserType } from "./types/user";
 import Repos from "./routes/Repos";
 
 
