@@ -5,7 +5,6 @@ export const Css = {
   UserImage: styled.img`
   border-radius: 50%;
   width: 50px;
-  
   `,
   ListMenu: styled.button`
     display: none; 
@@ -18,11 +17,14 @@ export const Css = {
 `,
   Header:styled.div`
     display: flex;
+    justify-content: space-between;
     align-items: center;
     background-color:#101220;
     height: 3.5em;
-    justify-content: space-between;
     padding: 0 10%;
+    width: 100%;
+    box-shadow: 0px 5px 20px #000;
+    flex-wrap: wrap;
   `,
   Nav:styled.div`
   display: flex;
@@ -48,6 +50,8 @@ export const Css = {
         width: 150px;
         border-radius: 50%;
       }
+      flex-wrap: wrap;
+
 
   `,
   SearchResultRight: styled.div`
@@ -73,6 +77,7 @@ HistoricStyle: styled.div`
   align-items: center;
   height: calc(100vh - 100px);
   overflow-y: scroll; 
+
 `,
  StyledBox : styled.div`
   border-radius: 10px;
@@ -85,6 +90,8 @@ HistoricStyle: styled.div`
  StyledList: styled.ul`
   list-style: none;
   padding: 0;
+  text-decoration: none;
+
 `,
 
  StyledListItem : styled.li`
@@ -125,7 +132,9 @@ HistoricStyle: styled.div`
         justify-content: center;
         align-items: center;
         gap: 1rem;
-        margin: 1.5rem;
+        border: 1px solid black;
+        margin: 50px 20px;
+
     `,
   Paragraph : styled.p`
         color: #eee;
@@ -137,6 +146,8 @@ HistoricStyle: styled.div`
   Container : styled.div`
     display: flex;
     gap: 0.5rem;
+    flex-wrap: wrap;
+
   `,
   Footer : styled.footer`
     background-color: #0005;
@@ -149,6 +160,7 @@ HistoricStyle: styled.div`
   `,
   LinkStyle: styled(Link)`
     color: #eee;
+    display: flex;
     &:hover{
       color: black;
     };

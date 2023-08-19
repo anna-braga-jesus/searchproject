@@ -11,6 +11,7 @@ interface RepoTypeList {
 
 export default function RepositoryList({ list, refreshList}: RepoTypeList){
     const { global } = useContext(GlobalContext);
+    
     useEffect(() => {
         refreshList()
     }, [global]);
@@ -25,6 +26,7 @@ export default function RepositoryList({ list, refreshList}: RepoTypeList){
     
     return (
         <Body>
+
             {list?.map((repo: any)=>{
             return (
             <li key={repo.id}>

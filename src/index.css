@@ -17,13 +17,16 @@
 }
 
 body {
-  /* background-color: lightgray; */
-  /* background-image: url("https://images.pexels.com/photos/5324856/pexels-photo-5324856.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");   */
-  background-image: url("../src/pexels-anna-shvets-5324856.jpg"); 
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; 
+  margin: 0; 
+  background-image: url("../src/pexels-anna-shvets-5324856.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
 }
+
 a{
   text-decoration: none;
 }
@@ -38,6 +41,7 @@ a{
   padding-top: 5em;
   height: 100vh;
   transition: 0.2s;
+  background-color: red;
 }
 
 
@@ -55,9 +59,7 @@ a{
     animation-duration: 2s;
     margin-left: -100vw;
   }
-  .img_logo_header{
-    display: none;
-  }
+  
 }
 @keyframes showSidebar {
   from{margin-left: -100vw;}
