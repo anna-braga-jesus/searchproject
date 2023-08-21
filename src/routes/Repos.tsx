@@ -18,7 +18,6 @@ export default function Repos(){
         if(global.global) {
             axios.get(global.global.repos_url).then(el => {
                 setRepos(el.data);
-                console.log(el.data)
             })
         }
     }

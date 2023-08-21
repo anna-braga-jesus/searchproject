@@ -16,13 +16,11 @@ export interface SearchType {
   
       request.onsuccess = (event) => {
         this.db = (event.target as IDBOpenDBRequest).result;
-        console.log('IndexedDB opened successfully');
       };
   
       request.onupgradeneeded = (event) => {
         this.db = (event.target as IDBOpenDBRequest).result;
         this.db.createObjectStore(this.storeName, { keyPath: 'id', autoIncrement: true });
-        console.log('IndexedDB upgrade needed');
       };
     }
   
@@ -33,7 +31,7 @@ export interface SearchType {
         const request = objectStore.add(search);
   
         request.onsuccess = () => {
-          console.log('Task added successfully');
+          ('Task added successfully');
           resolve();
         };
   
@@ -68,7 +66,7 @@ export interface SearchType {
         const request = objectStore.put(task);
   
         request.onsuccess = () => {
-          console.log('Task updated successfully');
+          ('Task updated successfully');
           resolve();
         };
   
@@ -86,7 +84,7 @@ export interface SearchType {
         const request = objectStore.delete(id);
   
         request.onsuccess = () => {
-          console.log('Task deleted successfully');
+          ('Task deleted successfully');
           resolve();
         };
   
