@@ -1,5 +1,5 @@
 export interface SearchType {
-    id?: number;
+    id: number;
     search: string;
   }
   
@@ -102,35 +102,3 @@ export interface SearchType {
   
 export default indexedDBCrud;
 
-/*
-
-const newTask: SearchType = {
-    id: 1,
-    search: 'Sample Task',
-  };
-  
-  indexedDBCrud.addSearch(newTask)
-    .then(() => indexedDBCrud.getSearchs())
-    .then((tasks) => {
-      console.log('All Tasks:', tasks);
-      return tasks;
-    })
-    .then((tasks) => {
-      const updatedTask = { ...tasks[0], completed: true };
-      return indexedDBCrud.updateSearch(updatedTask);
-    })
-    .then(() => indexedDBCrud.getSearchs())
-    .then((tasks) => {
-      console.log('Updated Tasks:', tasks);
-      return tasks[0].id;
-    })
-    .then((taskId) => indexedDBCrud.deleteSearch(taskId))
-    .then(() => indexedDBCrud.getSearchs())
-    .then((tasks) => {
-      console.log('Remaining Tasks:', tasks);
-    })
-    .catch((error) => {
-      console.error('Error:', error);
-    });
-  
-*/

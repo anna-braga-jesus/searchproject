@@ -23,7 +23,7 @@ export default function Home() {
       const { avatar_url, id, name, login, location, followers, following } = data;
       if(login) {
         const newSearch: SearchType = {
-            search: login,
+            search: login, id
           };
 
         indexedDBCrud.addSearch(newSearch);

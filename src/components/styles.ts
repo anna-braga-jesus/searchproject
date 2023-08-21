@@ -93,6 +93,15 @@ HistoricStyle: styled.div`
   text-decoration: none;
 
 `,
+HistoricBox: styled.div`
+display: flex;
+justify-content: space-between;
+align-items: center;
+background-color: #0005;
+padding: 5px;
+border-radius: 7px;
+margin: 20px;
+`,
 
  StyledListItem : styled.li`
   margin: 5px 0;
@@ -139,8 +148,9 @@ HistoricStyle: styled.div`
   Paragraph : styled.p`
         color: #eee;
         font-family: 'Roboto', sans-serif;
-        font-weight: 400;
+        font-weight: bold;
         text-align: center;
+        font-size: 20px;
 
     `,
   Container : styled.div`
@@ -204,6 +214,10 @@ RepoInfo : styled.div`
     box-sizing: border-box;
     list-style: none;
     padding: 1rem;
+`,
+Trash: styled.div`
+    border: none;
+    cursor: pointer;
 `,
   };
   
