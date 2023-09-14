@@ -34,7 +34,8 @@ Run the application:
 ```
 $ npm run dev or $ yarn dev
 ```
-
+## Next Steps
+Layout adjustments and Implementation of automated tests.
 
 
 
